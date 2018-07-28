@@ -1,13 +1,18 @@
-class Song
-  attr_accessor :title, :name
+require 'pry'
 
-  def initialize(title)
-    @title = title
-    @artist = name
+class Song
+  attr_accessor :song, :name, :artist
+
+  def initialize(name)
+    @name = name
   end
 
-  def artist
-    song.artist = self
+  def artist_name
+    if self.artist != nil
+      artist.name
+    else
+      return nil
+    end
   end
 
 end
