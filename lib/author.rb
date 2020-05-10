@@ -5,6 +5,7 @@ class Author
 
   def initialize(name)
     @name = name
+      @@posts << post
   end
 
   def posts
@@ -12,7 +13,6 @@ class Author
   end
 
   def add_post(post)
-    @@posts << post
     post.author = self
   end
 
@@ -23,6 +23,6 @@ class Author
 
   def self.post_count
     @@posts.count
-  end 
+  end
 
 end
